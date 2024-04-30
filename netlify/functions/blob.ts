@@ -1,7 +1,7 @@
 import { getStore } from "@netlify/blobs";
 
 export default async (req: Request) => {
-  const store = getStore("ntl-workshop-todos");
+  const store = getStore("ntl-todos");
 
   if (req.method === "GET") {
     const todos = await store.get("todos", { type: "json" });
